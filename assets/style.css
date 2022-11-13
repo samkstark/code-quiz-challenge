@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border-radius: 3px;
     font-family: 'Bebas Neue';
 
 /*debugging*/
@@ -30,6 +31,8 @@ button {
 button:hover {
     cursor: pointer;
     box-shadow: 0 1px 2px;
+    transition: transform 150ms;
+    transform: scale(1.03);
 }
 
 h1, h2 {
@@ -70,7 +73,7 @@ li {
 }
 /*Header/Quiz Intro*/
 .quiz-intro, main {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 30vh;
@@ -86,7 +89,7 @@ li {
 .quiz-intro button {
     display: block;
     margin: 0 auto;
-    font-size: 3.5vh;
+    font-size: 2.3vh;
     text-align: center;
     
 }
@@ -100,11 +103,50 @@ main {
 
 /*Question Screen Section*/
 .question-screen {
-    display: none;
+    color: white;
+    display: flex;
+
 }
 
-.quiz-question {}
+#question {
+    display: block;
+    font-size: 2rem;
+}
 
+.choice-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4 px;
+    background: blue;
+    font-size: 2.5rem;
+    min-width: 80 rem;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem;
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+.choice-prefix {
+    padding 2rem 2.5rem;
+    color: grey;
+}
+
+.choice-text {
+    padding: 1rem;
+    width: 100%;
+}
+
+.correct {
+    background: linear-gradient(25deg, green, 100);
+}
+
+.incorrect {
+    background: linear-gradient(25deg, red, 100%);
+}
 
 /*Quiz finish screen*/
 .quiz-end-screen {
