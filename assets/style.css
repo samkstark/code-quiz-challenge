@@ -30,6 +30,11 @@ color:burlywood;
 text-align: center;
 }
 
+li {
+    list-style-type: none;
+
+}
+
 /*outer-container section*/
 
 .outer-container {
@@ -58,6 +63,7 @@ text-align: center;
 }
 /*Header/Quiz Intro*/
 .quiz-intro, main {
+    display: none;
     margin-bottom: 30vh;
     margin-left: 10%;
     margin-right: 10%;
@@ -76,10 +82,21 @@ text-align: center;
 /*Main Quiz Content */
 
 main {
-    display: none;
+    display: block;
 
 }
 
+/*Question Screen Section*/
+.question-screen {
+    display: none;
+}
 
+/*Quiz finish screen*/
+.quiz-end-screen {
+    display: none;
+}
 
-
+/*Highscores screen*/
+.highscores-screen {
+    display: block;
+}
