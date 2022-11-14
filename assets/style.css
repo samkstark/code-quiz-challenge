@@ -13,14 +13,16 @@
 
 }
 
-/*body {
+body {
     background-color: #576bdd82;
     overflow: hidden;
-} */
+    margin: 0;
+    padding: 0;
+} 
 
 P {
 
-    font-size: 1.3em;
+    font-size: 2rem;
 }
 
 button {
@@ -28,6 +30,8 @@ button {
     outline: none;
     background-color: black;
     font-size: 1.3em;
+    color: white;
+
 }   
 button:hover {
     cursor: pointer;
@@ -39,7 +43,7 @@ button:hover {
 h1 {
     font-size: 4rem;
     margin-bottom: 5rem;
-    display: flex;
+    display: block;
     flex: column;
     align-items: center;
 }
@@ -55,10 +59,8 @@ margin-bottom: 4rem;
 
 .outer-container {
     padding: 10px;
-    height: 100vh;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: start;
 }
 
 /*Top-bar Container*/
@@ -80,7 +82,7 @@ margin-bottom: 4rem;
 }
 /*Header/Quiz Intro*/
 .quiz-intro, main {
-    display: block;
+    display: ;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 30vh;
@@ -98,6 +100,7 @@ margin-bottom: 4rem;
     margin: 0 auto;
     font-size: 2.3vh;
     text-align: center;
+    color: white
     
 }
 
@@ -111,7 +114,7 @@ main {
 /*Question Screen Section*/
 .question-screen {
     color: white;
-    display: flex;
+    display: none;
 
 }
 

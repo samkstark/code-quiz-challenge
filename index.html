@@ -8,59 +8,47 @@
     <title>Code Quiz Challenge</title>
 </head>
 <body>
-    <!--main outer div-->
-    <div class="outer-container">
 
         <!--top bar section-->
-        <div class ="top-bar">
-            <button>View High Scores</button>
-            <p id="countdown">Timer</p>
-        </div>
+        <header>
+            <button id="view-high-scores">View High Scores</button>
+            <h4 class="timer">Timer <span id="timer"></span></h4>
+        </header>
 
         <!--inner div-->
-        <div class="inner-container">
+        <div class="intro-container" class ="show">
             <!--PHASE 1 !!-->
             <!--main header/quiz intro-->
-            <header class="quiz-intro">
+            <div id="start-container">
                 <h1>Welcome to the Coding Quiz</h1>
-                <p>Try to answer the following coding questions within the time limit. Keep in mind that incorrect answers will decrease the time given by 10 seconds!</p>
-                <button>Start Quiz!</button>
-
-            </header>
+                <p>Try to answer the following coding questions within the time limit. Keep in mind that incorrect answers will decrease the time given by 5 seconds!</p>
+                <button class="btn start" id="start-game">Start Quiz!</button>
+            </div>
+            </div>
 
             <!--Main quiz content-->
             <main>
             <!--PHASE 2!!-->
-            <section class="question-screen">
-            <h1 id="question">What is the answer to this question?</h1>
-            <div class="choice-container">
-                <p class="choice-prefix">A</p>
-                <p class="choice-text" data-number="1">Choice 1</p>
+            <div id="question-screen" class="hide">
+                <div class="question container">
+                    <div id="question">What is the answer to this question?</div>
+                <div id="choice-buttons" class="btn-choice"></div> 
             </div>
-            <div class="choice-container">
-                <p class="choice-prefix">B</p>
-                <p class="choice-text" data-number="2">Choice 2</p>
             </div>
-            <div class="choice-container">
-                <p class="choice-prefix">C</p>
-                <p class="choice-text" data-number="3">Choice 3</p>
-            </div>
-            <div class="choice-container">
-                <p class="choice-prefix">D</p>
-                <p class="choice-text" data-number="4">Choice 4</p>
-            </div>
-            </section>
-
+            
+            
             <!--PHASE 3!!-->
-            <section class="quiz-end-screen">
-        <h2>All Done!</h2>
-        <p>Your Final Score: 00</p>
-        <div>
-            <label for="">Please Enter Your Initials</label>
-            <input type="text">
-            <button>Submit</button>
+        <div class="quiz-end-container" class="hide">
+            <div class="container quiz end">
+        <h1>All Done!</h1>
         </div>
-        </section>
+        <form id="initials-form" class="initials">
+            <p>Please enter your initials
+            <input type="text" name="initials" class="text-input" />
+            <button class="btn start" id="submit-score" type="submit">Submit Score</button></p>
+        </form>
+        <div>
+        </div>
 
         <!--PHASE 4-->
         <section class="highscores-screen">
