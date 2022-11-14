@@ -1,16 +1,32 @@
-var ViewHighScoreEl = document.getElementById("view-highscores")
-var timerEl = document.getElementById("timer")
+
+var timerEl = document.querySelector("#timer")
 var introcontainerEl = document.getElementById("start-container")
 var questionScreenEl = document.getElementById("question-screen")
 var questionEl = document.getElementById("question")
 var choiceButtonsEl = document.getElementById("#choice-buttons")
 var initialsFormEl = document.getElementById("initials-form")
 var scoreContainerEl = document.getElementById("score-container")
+var scoreListEl = document.getElementById("score-list")
+var correctEl = document.getElementById("correct")
+var incorrectEl = document.getElementById("incorrect")
 
+
+var scoreButtonEl = document.querySelector("view-highscores")
 var startButtonEl = document.querySelector("#start-game")
 var submitButtonEl = document.querySelector("#submit-score")
+var backButtonEl = document.querySelector("return")
 
-let questions = [
+var score = 0;
+var timeleft;
+var endgame;
+timerEl.innerText = 0;
+
+var highscores = []
+
+var randomQuestions
+var questionIndex = 0;
+
+var questions = [
     {
         question: 'Commonly used data types DO not include:',
         choice1: 'Strings',
@@ -51,7 +67,48 @@ let questions = [
         choice4: 'Console.log',
         answer: 1,
     }
-]
+];
+
+var returnToStart = function () {
+    scoreContainerEl.classList.add("hide")
+    scoreContainerEl.classList.remove("show")
+    introcontainerEl.classList.add("show")
+    introcontainerEl.classList.remove("hide")
+    scoreContainerEl.removeChild(scoreContainerEl.lastChild)
+    QuestionIndex = 0
+    endgame ""
+    timerEl.textContent = 0
+
+    if (correctEl.className = "show") {
+        correctEl.classList.add("hide")
+        correctEl.classList.remove("show")
+    }
+    if (incorrectEl.className = "show") {
+        incorrectEl.classList.add("hide")
+        incorrectEl.classList.remove("show")
+    }
+}
+
+var setTime = function () {
+    timeleft = 60;
+
+var timecheck = setInterval(function ()) {
+    timerEl.innerText = timeleft
+    timeleft--
+
+    if (endgame) {
+        clearInterval(timecheck)
+        }
+
+    if (timeleft < 0) {
+        displayScore();
+    }
+    
+}
+
+var displayScore = function () {
+contai
+
 
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 5
@@ -107,11 +164,3 @@ choices.forEach(choice => {
         getNewQuestion()
     }, 1000)
 })
-
-
-incrementScore = num => {
-    score += num
-    scoreText.innerText = score
-}
-
-startGame()
