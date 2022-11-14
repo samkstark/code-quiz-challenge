@@ -173,11 +173,11 @@ margin: auto;
 }
 
 /*Quiz finish screen*/
-.quiz-end-screen {
-    display: none;
+ol {
+    list-style-type: number;
 }
+ li {
+    font-size: 1.5rem;
+ }
 
-/*Highscores screen*/
-.highscores-screen {
-    display: none;
-}
+

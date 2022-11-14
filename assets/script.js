@@ -1,12 +1,14 @@
-const question = document.querySelector('#question');
-const choices = Array.from(document.querySelectorAll('.choice-text'));
-const scoreText = document.querySelector('#score');
+var ViewHighScoreEl = document.getElementById("view-highscores")
+var timerEl = document.getElementById("timer")
+var introcontainerEl = document.getElementById("start-container")
+var questionScreenEl = document.getElementById("question-screen")
+var questionEl = document.getElementById("question")
+var choiceButtonsEl = document.getElementById("#choice-buttons")
+var initialsFormEl = document.getElementById("initials-form")
+var scoreContainerEl = document.getElementById("score-container")
 
-let currentQuestion = {};
-let acceptingAnswers = true;
-let score = 0;
-let questionCounter = 0;
-let availableQuestions = [];
+var startButtonEl = document.querySelector("#start-game")
+var submitButtonEl = document.querySelector("#submit-score")
 
 let questions = [
     {
