@@ -11,8 +11,8 @@
 
         <!--top bar section-->
         <header>
-            <button id="view-high-scores">View High Scores</button>
-            <h4 class="timer">Timer <span id="timer"></span></h4>
+            <button id="view-highscores">View High Scores</button>
+            <h3 class="timer">Timer <span id="timer"></span></h3>
         </header>
 
         <!--inner div-->
@@ -22,7 +22,7 @@
             <div id="start-container">
                 <h1>Welcome to the Coding Quiz</h1>
                 <p>Try to answer the following coding questions within the time limit. Keep in mind that incorrect answers will decrease the time given by 5 seconds!</p>
-                <button class="btn start" id="start-game">Start Quiz!</button>
+                <button class="button start" id="start-game">Start Quiz!</button>
             </div>
             </div>
 
@@ -32,7 +32,7 @@
             <div id="question-screen" class="hide">
                 <div class="question container">
                     <div id="question">What is the answer to this question?</div>
-                <div id="choice-buttons" class="btn-choice"></div> 
+                <div id="choice-buttons" class="button-choice"></div> 
             </div>
             </div>
             
@@ -45,26 +45,32 @@
         <form id="initials-form" class="initials">
             <p>Please enter your initials
             <input type="text" name="initials" class="text-input" />
-            <button class="btn start" id="submit-score" type="submit">Submit Score</button></p>
+            <button class="button start" id="submit-score" type="submit">Submit Score</button></p>
         </form>
         <div>
         </div>
 
         <!--PHASE 4-->
-        <section class="highscores-screen">
-            <h2>High Scores</h2>
-            <ol>
-                <li>Initials - Score </li>
-                <li>Initials - Score </li>
-            </ol>
-            <button>Go Back</button>
-            <button>Clear High Scores</button>
-        </section>
+        <div id="score-container" class="hide">
+        <div class="highscores-screen">
+            <h1 class="high-scores">High Scores</h1>
+            <ol id="score-list"> class="high-scorelist"></ol>
+        </div> 
+            <button class="button" id="return">Go Back</button>
+            <button class="button" id="clear-scores">Clear High Scores</button>
+        </div>
+        </div>
 
+        <div class="hide" id="correct">
+            <h2>Correct !!!</h2>
+        </div>
+        <div class="hide" id="incorrect">
+        <h2>Sorry, incorrect !!!</h2>
+        </div>
 
             </main>
-        </div>
-    </div>
+       
+    
 
     <script src="./assets/script.js"></script>
 </body>

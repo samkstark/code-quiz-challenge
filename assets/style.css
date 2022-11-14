@@ -7,10 +7,6 @@
     border-radius: 3px;
     font-size: 62.5%;
     font-family: 'Bebas Neue';
-
-/*debugging*/
-    /*border: 1px solid red; */
-
 }
 
 body {
@@ -20,54 +16,114 @@ body {
     padding: 0;
 } 
 
-P {
-
-    font-size: 2rem;
+header {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+}
+#view-highscores:hover {
+    cursor: pointer;
 }
 
-button {
+.timer {
+    font-size: 2.3rem;
+    display: inline;
+    text-align: right;
+    padding-right: 15px;
+}
 
-    outline: none;
-    background-color: black;
-    font-size: 1.3em;
+header h3 {
+    font-size: 2.5rem;
+}
+
+
+.container {
+    padding: 10px;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 4rem;
+    display: block;
+}
+
+p {
+    color: black;
+    font-size: 2.5rem;
+}
+
+.start {
+    align-items: center;
+    text-align: center;
+}
+
+.start h1, .start p {
+    text-align: center;
+}
+
+.question {
+align-items: flex-start;
+justify-content: flex-start;
+padding: 30px 15px;
+margin: auto;    
+}
+
+.end h1, .end p {
+    text-align: left;
+}
+
+.end input {
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+#question {
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#highscores {
+    text-align: left;
+
+}
+
+.button {
     color: white;
+    background-color: black;
+    font-size: 2rem;
+    padding: 2px;
+    border-radius: 4px;
 
 }   
-button:hover {
+.button:hover {
     cursor: pointer;
     box-shadow: 0 1px 2px;
     transition: transform 150ms;
     transform: scale(1.03);
 }
 
-h1 {
-    font-size: 4rem;
-    margin-bottom: 5rem;
-    display: block;
-    flex: column;
-    align-items: center;
+.start {
+    width: 20%
 }
 
-h2 {
-color:burlywood;
-text-align: center;
-margin-bottom: 4rem;
+.choice-buttons {
+    width: 50%;
+    text-align: left;
 }
 
-
-/*outer-container section*/
-
-.outer-container {
-    padding: 10px;
-    height: 100%;
-    display: flex;
-}
-
-/*Top-bar Container*/
-.top-bar p {
-    float: right;
-
-}
 
 /*Inner-COntainer Section*/
 .inner-container {
@@ -91,26 +147,6 @@ margin-bottom: 4rem;
     background-color: brown
 }
 
-.quiz-intro p {
-    text-align: center;
-}
-
-.quiz-intro button {
-    display: block;
-    margin: 0 auto;
-    font-size: 2.3vh;
-    text-align: center;
-    color: white
-    
-}
-
-/*Main Quiz Content */
-
-main {
-    display: block;
-
-}
-
 /*Question Screen Section*/
 .question-screen {
     color: white;
@@ -123,39 +159,17 @@ main {
     font-size: 2rem;
 }
 
-.choice-container {
-    display: flex;
-    margin-bottom: 0.8rem;
-    width: 100%;
-    border-radius: 4 px;
-    background: blue;
-    font-size: 2.5rem;
-    min-width: 80 rem;
+
+.banner {
+    font-size: 25px;
+    text-align: center;
+    color: black;
 }
 
-.choice-container:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem;
-    transform: scale(1.02);
-    transform: transform 100ms;
-}
-
-.choice-prefix {
-    padding 2rem 2.5rem;
-    color: grey;
-}
-
-.choice-text {
-    padding: 1rem;
-    width: 100%;
-}
-
-.correct {
-    background: linear-gradient(25deg, green, 100);
-}
-
-.incorrect {
-    background: linear-gradient(25deg, red, 100%);
+.banner h2 {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 3px;
 }
 
 /*Quiz finish screen*/
